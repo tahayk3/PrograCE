@@ -1,4 +1,4 @@
-{% extends 'blog/basever.html' %}
+{% extends 'blog/base.html' %}
 
 {% block content %}
     <div class="post">
@@ -6,6 +6,9 @@
             <div class="date">
                 {{ publicacion.fecha_publicacion }}
             </div>
+        {% endif %}
+        {% if user.is_authenticated %}
+            <h2><a class = "navbar-item" href="{% url 'publicacion_editar' pk=publicacion.pk %}"></a></h2>
         {% endif %}
         <h2>{{ publicacion.titulo }}</h2>
         <p>{{ publicacion.texto|linebreaksbr }}</p>
