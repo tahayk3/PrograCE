@@ -18,7 +18,6 @@ def publicacion_nueva(request):
         if formulario.is_valid():
             publicacion = formulario.save(commit=False)
             publicacion.autor = request.user
-            publicacion.fecha_publicacion = timezone.now()
             publicacion.save()
             return redirect('publicacion_detalle', pk = publicacion.pk)
     else:
@@ -32,7 +31,6 @@ def publicacion_editar(request,pk):
         if formulario.is_valid():
             publicacion = formulario.save(commit=False)
             publicacion.autor = request.user
-            publicacion.fecha_publicacion = timezone.now()
             publicacion.save()
             return redirect('publicacion_detalle', pk = publicacion.pk)
     else:
