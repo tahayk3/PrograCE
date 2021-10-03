@@ -2,13 +2,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>    
+            <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
     <body>
         <section class="hero is-primary is-small">
         <!-- Hero head: will stick at the top -->
@@ -30,20 +31,28 @@
                     <a class="navbar-item" href="http://127.0.0.1:8000/">
                     Home
                     </a>
-                    <a class="navbar-item" >
+                    <a class="navbar-item" href="{% url 'publicacion_nueva'  %}">
                     Ingresos
                     </a>
-                    <a class="navbar-item">
-                    Documentation
+                    <a class="navbar-item" href="{% url 'publicacion_borrador_lista'  %}">
+                    Borradores
                     </a>
                     <span class="navbar-item">
-                    <a class="button is-primary is-inverted">
+                    <a class="button is-primary is-inverted" href="{% url 'login'  %}">
                         <span class="icon">
                         <i class="fab fa-github"></i>
                         </span>
-                        <span>Download</span>
+                        <span>LOGIN</span>
                     </a>
                     </span>
+                    <span class="navbar-item">
+                        <a class="button is-primary is-inverted" href="{% url 'logout'  %}">
+                            <span class="icon">
+                            <i class="fab fa-github"></i>
+                            </span>
+                            <span>SALIR</span>
+                        </a>
+                        </span>
                 </div>
                 </div>
             </div>
